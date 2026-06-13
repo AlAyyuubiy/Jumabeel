@@ -553,3 +553,162 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* ---------- TRUST BAR ---------- */
+.trust-bar {
+  background: var(--black);
+  border-bottom: 1px solid rgba(240,112,32,0.2);
+  padding: 0.9rem 0;
+}
+.trust-items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0;
+}
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  color: var(--gray-light);
+  padding: 0.3rem 1.5rem;
+  font-weight: 500;
+}
+.trust-item .trust-icon { font-size: 1rem; }
+.trust-divider {
+  width: 1px;
+  height: 20px;
+  background: rgba(255,255,255,0.12);
+}
+
+/* ---------- STATS STRIP ---------- */
+.stats-strip {
+  background: var(--orange);
+  padding: 50px 0;
+}
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  text-align: center;
+}
+.stat-item {}
+.stat-big {
+  font-family: var(--font-heading);
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--white);
+  display: block;
+  line-height: 1;
+}
+.stat-desc {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.85);
+  margin-top: 0.4rem;
+  display: block;
+  font-weight: 500;
+}
+
+/* ---------- ABOUT TEASER ADDITIONS ---------- */
+.about-cac-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: rgba(240,112,32,0.08);
+  border: 1px solid rgba(240,112,32,0.2);
+  border-radius: var(--radius);
+  padding: 0.85rem 1.2rem;
+  margin-top: 1.5rem;
+}
+.about-cac-badge .cac-icon { font-size: 1.5rem; flex-shrink: 0; }
+.about-cac-badge strong { display: block; color: var(--white); font-size: 0.88rem; }
+.about-cac-badge span { font-size: 0.75rem; color: var(--gray); }
+
+/* ---------- LCC TEASER ---------- */
+.lcc-teaser { background: var(--black); }
+.lcc-teaser-inner {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 4rem;
+  align-items: center;
+  background: var(--black-card);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(240,112,32,0.2);
+  padding: 3rem;
+}
+.lcc-teaser-content h2 { color: var(--white); margin-bottom: 1rem; }
+.lcc-teaser-content h2 span { color: var(--orange); }
+.lcc-teaser-content p { color: var(--gray-light); margin-bottom: 1.5rem; }
+.lcc-perks {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+.lcc-perks li { color: var(--gray-light); font-size: 0.88rem; }
+.lcc-price-row { display: flex; align-items: center; gap: 2rem; flex-wrap: wrap; }
+.lcc-price { display: flex; flex-direction: column; }
+.price-current {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--orange);
+  line-height: 1;
+}
+.price-original {
+  font-size: 0.85rem;
+  color: var(--gray);
+  text-decoration: line-through;
+  margin-top: 0.2rem;
+}
+.lcc-teaser-badge {
+  text-align: center;
+  flex-shrink: 0;
+}
+.lcc-badge-circle {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: var(--orange);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  box-shadow: var(--shadow-orange);
+}
+.lcc-batch { font-family: var(--font-heading); font-size: 1.2rem; font-weight: 700; color: white; line-height: 1; }
+.lcc-num { font-family: var(--font-heading); font-size: 2.5rem; font-weight: 700; color: white; line-height: 1; }
+.lcc-sub { font-size: 0.68rem; color: rgba(255,255,255,0.85); margin-top: 0.2rem; }
+.lcc-teaser-badge p { color: var(--gray-light); font-size: 0.82rem; margin: 0.2rem 0; }
+
+/* ---------- SERVICES GRID 4 COLS ---------- */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+/* ---------- RESPONSIVE ADDITIONS ---------- */
+@media (max-width: 1024px) {
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .lcc-teaser-inner { grid-template-columns: 1fr; gap: 2rem; }
+  .lcc-teaser-badge { display: flex; align-items: center; gap: 2rem; justify-content: center; }
+  .lcc-badge-circle { margin: 0; }
+}
+@media (max-width: 768px) {
+  .services-grid { grid-template-columns: 1fr; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .trust-items { gap: 0.5rem; }
+  .trust-divider { display: none; }
+  .lcc-teaser-inner { padding: 2rem; }
+  .lcc-teaser-badge { flex-direction: column; }
+}
+@media (max-width: 480px) {
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .lcc-price-row { flex-direction: column; align-items: flex-start; gap: 1rem; }
+}

@@ -1,0 +1,240 @@
+/* ============================================
+   JUMABEEL CREATIONS — Resin Page Styles
+   resin.css
+============================================ */
+
+/* ---------- HERO ---------- */
+.resin-hero {
+  background: var(--black);
+  padding: 140px 0 80px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.resin-hero::before {
+  content:''; position:absolute; top:-30%; left:-10%;
+  width:500px; height:500px;
+  background:radial-gradient(circle,rgba(240,112,32,.13) 0%,transparent 70%);
+  pointer-events:none;
+}
+.resin-hero::after {
+  content:''; position:absolute; bottom:-20%; right:-5%;
+  width:350px; height:350px;
+  background:radial-gradient(circle,rgba(240,112,32,.07) 0%,transparent 70%);
+  pointer-events:none;
+}
+.resin-hero .container { position:relative; z-index:1; }
+.resin-hero h1 { color:var(--white); margin-bottom:1rem; }
+.resin-hero h1 span { color:var(--orange); font-style:italic; }
+.resin-hero p { color:var(--gray-light); max-width:560px; margin:0 auto 2rem; font-size:1rem; }
+
+.resin-hero-stats {
+  display:flex; justify-content:center;
+  gap:3rem; margin-top:2.5rem; flex-wrap:wrap;
+}
+.resin-hero-stats .hero-stat .stat-number {
+  font-family:var(--font-heading); font-size:2rem; font-weight:700;
+  color:var(--orange); display:block; line-height:1;
+}
+.resin-hero-stats .hero-stat .stat-label {
+  font-size:.78rem; color:var(--gray-light);
+  letter-spacing:1px; margin-top:.3rem; display:block;
+}
+
+/* ---------- RESIN GALLERY ---------- */
+.resin-gallery { background: var(--cream); padding: 80px 0; }
+
+.resin-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+/* Resin Product Card */
+.resin-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  position: relative;
+}
+.resin-card:hover {
+  transform: translateY(-7px);
+  box-shadow: var(--shadow-md);
+}
+
+.resin-img-wrap { position:relative; overflow:hidden; }
+.resin-img {
+  width:100%; height:260px;
+  object-fit:cover; display:block;
+  transition: transform 0.4s ease;
+  cursor: zoom-in;
+}
+.resin-card:hover .resin-img { transform:scale(1.06); }
+
+.resin-img-placeholder {
+  width:100%; height:260px;
+  background:linear-gradient(135deg,var(--black-card) 0%,var(--black-soft) 100%);
+  display:flex; flex-direction:column;
+  align-items:center; justify-content:center;
+  gap:.5rem; font-size:3.5rem; cursor:pointer;
+}
+.resin-img-placeholder small {
+  font-size:.72rem; color:var(--gray);
+  font-family:var(--font-body);
+}
+
+.resin-type-tag {
+  position:absolute; top:12px; left:12px;
+  background:var(--black); color:var(--orange);
+  font-size:.7rem; font-weight:600;
+  letter-spacing:1.5px; text-transform:uppercase;
+  padding:.3rem .8rem; border-radius:var(--radius-full); z-index:1;
+}
+.resin-status-tag {
+  position:absolute; top:12px; right:12px;
+  font-size:.68rem; font-weight:600;
+  padding:.25rem .7rem; border-radius:var(--radius-full); z-index:1;
+}
+.resin-status-tag.available { background:#25D366; color:white; }
+.resin-status-tag.custom { background:var(--orange); color:white; }
+.resin-sale-badge {
+  position:absolute; bottom:12px; left:12px;
+  background:#E53E3E; color:white;
+  font-size:.68rem; font-weight:700;
+  padding:.2rem .6rem; border-radius:var(--radius-full); z-index:1;
+}
+
+.resin-card-body { padding:1.3rem 1.5rem 1.5rem; }
+.resin-card-body h3 { font-size:1.05rem; margin-bottom:.35rem; }
+.resin-card-body p { font-size:.82rem; color:var(--gray); margin-bottom:1rem; line-height:1.6; }
+
+.resin-card-footer {
+  display:flex; align-items:center;
+  justify-content:space-between; gap:.5rem; flex-wrap:wrap;
+}
+.resin-price {
+  font-family:var(--font-heading); font-weight:700;
+  color:var(--orange); font-size:1.05rem;
+}
+.resin-price .original-price {
+  font-family:var(--font-body); font-size:.75rem;
+  color:var(--gray); text-decoration:line-through;
+  font-weight:400; display:block; line-height:1;
+}
+.resin-price small {
+  font-family:var(--font-body); font-size:.72rem;
+  color:var(--gray); font-weight:400; display:block; line-height:1;
+}
+
+/* ---------- WHAT IS RESIN ---------- */
+.resin-about { background: var(--black); padding: 70px 0; }
+.resin-about .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+.resin-about-content h2 { color:var(--white); margin-bottom:1rem; }
+.resin-about-content h2 span { color:var(--orange); }
+.resin-about-content p { color:var(--gray-light); margin-bottom:1rem; }
+.resin-features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+.resin-feature {
+  background: var(--black-card);
+  border-radius: var(--radius);
+  padding: 1rem;
+  border-left: 3px solid var(--orange);
+}
+.resin-feature .feat-icon { font-size:1.5rem; margin-bottom:.4rem; display:block; }
+.resin-feature h4 {
+  color:var(--white); font-family:var(--font-body);
+  font-size:.85rem; font-weight:600; margin-bottom:.2rem;
+}
+.resin-feature p { color:var(--gray); font-size:.78rem; margin:0; }
+
+.resin-about-visual {
+  position: relative;
+}
+.resin-about-img-placeholder {
+  width:100%; height:400px;
+  background:var(--black-card);
+  border-radius:var(--radius-lg);
+  border:2px solid rgba(240,112,32,.2);
+  display:flex; align-items:center;
+  justify-content:center; font-size:5rem;
+}
+
+/* ---------- CUSTOM ORDER SECTION ---------- */
+.resin-custom { background: var(--cream); padding: 70px 0; }
+.resin-custom-inner {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 3rem;
+  box-shadow: var(--shadow-sm);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+.resin-custom-content h2 { margin-bottom:1rem; }
+.resin-custom-content h2 span { color:var(--orange); }
+.resin-custom-content p { color:var(--gray); margin-bottom:1.5rem; }
+.custom-options {
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+  margin-bottom: 2rem;
+}
+.custom-option {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  font-size: .88rem;
+  color: var(--black);
+}
+.custom-option .opt-icon { font-size:1.2rem; flex-shrink:0; }
+
+.resin-custom-visual {
+  text-align: center;
+}
+.custom-price-card {
+  background: var(--black);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem 2rem;
+  text-align: center;
+}
+.custom-price-card .cpc-icon { font-size:3rem; margin-bottom:1rem; display:block; }
+.custom-price-card h3 { color:var(--white); margin-bottom:.5rem; font-size:1.2rem; }
+.custom-price-card p { color:var(--gray-light); font-size:.85rem; margin-bottom:1.5rem; }
+.custom-price-card .price-tag {
+  font-family:var(--font-heading); font-size:2rem;
+  font-weight:700; color:var(--orange); display:block; margin-bottom:1.5rem;
+}
+
+/* ---------- CTA ---------- */
+.resin-cta { background:var(--orange); padding:70px 0; text-align:center; }
+.resin-cta h2 { color:var(--white); margin-bottom:.75rem; }
+.resin-cta p { color:rgba(255,255,255,.88); max-width:500px; margin:0 auto 2rem; }
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width:1024px) {
+  .resin-grid { grid-template-columns:repeat(2,1fr); }
+  .resin-about .container { grid-template-columns:1fr; gap:3rem; }
+  .resin-custom-inner { grid-template-columns:1fr; gap:2rem; }
+}
+@media (max-width:768px) {
+  .resin-grid { grid-template-columns:1fr; }
+  .resin-features { grid-template-columns:1fr; }
+  .resin-hero-stats { gap:1.5rem; }
+  .resin-custom-inner { padding:2rem; }
+}
+@media (max-width:480px) {
+  .resin-card-footer { flex-direction:column; align-items:flex-start; }
+  .btn-order { width:100%; justify-content:center; }
+}
