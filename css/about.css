@@ -1,0 +1,304 @@
+/* ============================================
+   JUMABEEL CREATIONS — About Page Styles
+   about.css
+============================================ */
+
+/* ---------- HERO ---------- */
+.about-hero {
+  background: var(--black);
+  padding: 140px 0 80px;
+  position: relative;
+  overflow: hidden;
+}
+.about-hero::before {
+  content:''; position:absolute; top:-30%; right:-10%;
+  width:600px; height:600px;
+  background:radial-gradient(circle,rgba(240,112,32,.12) 0%,transparent 70%);
+  pointer-events:none;
+}
+.about-hero .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+  position: relative; z-index:1;
+}
+
+/* Photo side */
+.about-hero-visual { position: relative; }
+.about-hero-img {
+  width: 100%; height: 500px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  border: 3px solid rgba(240,112,32,.3);
+  display: block;
+}
+.about-hero-img-placeholder {
+  width: 100%; height: 500px;
+  background: var(--black-card);
+  border-radius: var(--radius-lg);
+  border: 3px solid rgba(240,112,32,.2);
+  display: flex; flex-direction:column;
+  align-items:center; justify-content:center;
+  gap: 1rem;
+}
+.about-hero-img-placeholder svg { opacity:.25; }
+.about-hero-img-placeholder p { color:var(--gray); font-size:.82rem; text-align:center; }
+
+/* Decorative frame */
+.about-hero-visual::before {
+  content:'';
+  position:absolute; top:20px; left:20px; right:-20px; bottom:-20px;
+  border:2px solid rgba(240,112,32,.15);
+  border-radius:var(--radius-lg);
+  z-index:0;
+}
+.about-hero-img,
+.about-hero-img-placeholder { position:relative; z-index:1; }
+
+/* Floating name card */
+.about-name-card {
+  position: absolute;
+  bottom: -20px; right: -20px;
+  background: var(--orange);
+  border-radius: var(--radius-lg);
+  padding: 1.2rem 1.8rem;
+  z-index: 2;
+  box-shadow: var(--shadow-orange);
+}
+.about-name-card .card-name {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: white;
+  display: block;
+  line-height: 1.2;
+}
+.about-name-card .card-role {
+  font-size: .75rem;
+  color: rgba(255,255,255,.85);
+  display: block;
+  margin-top: .2rem;
+  font-style: italic;
+}
+
+/* Text side */
+.about-hero-content {}
+.about-hero-content .greeting {
+  font-family: var(--font-accent);
+  font-size: 1.6rem;
+  color: var(--orange);
+  display: block;
+  margin-bottom: .5rem;
+}
+.about-hero-content h1 { color:var(--white); margin-bottom: 1rem; }
+.about-hero-content h1 span { color:var(--orange); }
+.about-hero-content p { color:var(--gray-light); margin-bottom:1rem; line-height:1.9; }
+.about-hero-content .full-name {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  color: var(--orange);
+  font-style: italic;
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+/* CAC badge */
+.cac-licensed-badge {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(240,112,32,.08);
+  border: 1px solid rgba(240,112,32,.2);
+  border-radius: var(--radius);
+  padding: 1rem 1.5rem;
+  margin-top: 1.5rem;
+}
+.cac-licensed-badge svg { flex-shrink:0; }
+.cac-licensed-badge strong { color:var(--white); font-size:.9rem; display:block; }
+.cac-licensed-badge span { color:var(--gray); font-size:.78rem; }
+
+/* ---------- WHAT JUMABEEL DOES ---------- */
+.what-we-do { background:var(--cream); padding:80px 0; }
+.what-we-do-inner {
+  background:var(--white);
+  border-radius:var(--radius-lg);
+  padding:3rem;
+  box-shadow:var(--shadow-sm);
+}
+.what-we-do-inner h2 { margin-bottom:.75rem; }
+.what-we-do-inner h2 span { color:var(--orange); }
+.what-we-do-inner .brand-statement {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--black);
+  line-height: 1.9;
+  border-left: 4px solid var(--orange);
+  padding-left: 1.5rem;
+  margin: 1.5rem 0;
+}
+.what-we-do-inner p { color:var(--gray); margin-bottom:1rem; line-height:1.9; }
+
+/* Craft expertise chips */
+.craft-chips {
+  display: flex; flex-wrap:wrap; gap:.6rem; margin-top:1.5rem;
+}
+.craft-chip {
+  display: flex; align-items:center; gap:.4rem;
+  background: var(--cream);
+  border: 1px solid var(--cream-dark);
+  border-radius: var(--radius-full);
+  padding: .4rem 1rem;
+  font-size: .82rem;
+  font-weight: 600;
+  color: var(--black);
+  transition: var(--transition);
+}
+.craft-chip:hover { border-color:var(--orange); color:var(--orange); }
+.craft-chip svg { width:15px; height:15px; stroke:var(--orange); }
+
+/* ---------- VISION MISSION VALUES ---------- */
+.vmv-section { background:var(--black); padding:80px 0; }
+.vmv-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+.vmv-card {
+  background: var(--black-card);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  border-top: 4px solid var(--orange);
+  transition: var(--transition);
+}
+.vmv-card:hover { transform:translateY(-5px); }
+.vmv-card-icon {
+  width: 52px; height:52px;
+  border-radius: var(--radius);
+  background: rgba(240,112,32,.1);
+  display:flex; align-items:center; justify-content:center;
+  margin-bottom: 1.2rem;
+}
+.vmv-card-icon svg { width:26px; height:26px; stroke:var(--orange); }
+.vmv-card h3 {
+  color: var(--white); font-family:var(--font-body);
+  font-size:1rem; font-weight:700; margin-bottom:.75rem;
+  letter-spacing:.5px; text-transform:uppercase;
+}
+.vmv-card p { color:var(--gray-light); font-size:.88rem; line-height:1.9; }
+
+/* Core values list */
+.values-list {
+  display:flex; flex-direction:column; gap:.6rem; margin-top:.5rem;
+}
+.values-list li {
+  display:flex; align-items:flex-start; gap:.6rem;
+  font-size:.85rem; color:var(--gray-light); line-height:1.6;
+}
+.values-list li svg { width:16px; height:16px; stroke:var(--orange); flex-shrink:0; margin-top:2px; }
+
+/* ---------- CLOSING STATEMENT ---------- */
+.closing-section { background: var(--cream); padding: 70px 0; }
+.closing-inner {
+  background: var(--black);
+  border-radius: var(--radius-lg);
+  padding: 3rem;
+  text-align: center;
+  border: 1px solid rgba(240,112,32,.15);
+  position: relative;
+  overflow: hidden;
+}
+.closing-inner::before {
+  content:'';
+  position:absolute; top:-30%; left:-10%;
+  width:400px; height:400px;
+  background:radial-gradient(circle,rgba(240,112,32,.08) 0%,transparent 70%);
+  pointer-events:none;
+}
+.closing-inner .container { position:relative; z-index:1; }
+.closing-quote {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: clamp(1.1rem,2.5vw,1.5rem);
+  color: var(--white);
+  line-height: 1.9;
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+}
+.closing-quote span { color:var(--orange); }
+.closing-dua {
+  font-family: var(--font-accent);
+  font-size: 1.4rem;
+  color: var(--orange);
+  display: block;
+  margin-bottom: 2rem;
+}
+
+/* ---------- SOCIAL LINKS ---------- */
+.social-section { background: var(--white); padding: 70px 0; }
+.social-section h2 span { color:var(--orange); }
+.social-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+.social-card {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  background: var(--cream);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  border: 1px solid var(--cream-dark);
+  text-decoration: none;
+  transition: var(--transition);
+  color: var(--black);
+}
+.social-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-sm);
+  border-color: rgba(240,112,32,.3);
+}
+.social-card-icon {
+  width: 52px; height:52px;
+  border-radius: 50%;
+  display:flex; align-items:center; justify-content:center;
+  flex-shrink:0;
+}
+.social-card-icon.wa { background:#25D366; }
+.social-card-icon.ig { background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); }
+.social-card-icon.fb { background:#1877F2; }
+.social-card-icon.tk { background:#000; }
+.social-card-icon.yt { background:#FF0000; }
+.social-card-icon.th { background:#000; }
+.social-card-icon svg { width:24px; height:24px; fill:white; }
+.social-card-info .platform { font-weight:700; font-size:.95rem; color:var(--black); display:block; }
+.social-card-info .handle { font-size:.8rem; color:var(--gray); display:block; margin-top:.1rem; }
+.social-card-arrow {
+  margin-left:auto;
+  width:32px; height:32px;
+  border-radius:50%;
+  background:var(--cream-dark);
+  display:flex; align-items:center; justify-content:center;
+  flex-shrink:0; transition:var(--transition);
+}
+.social-card:hover .social-card-arrow { background:var(--orange); }
+.social-card-arrow svg { width:14px; height:14px; stroke:var(--gray); }
+.social-card:hover .social-card-arrow svg { stroke:white; }
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width:1024px) {
+  .about-hero .container { grid-template-columns:1fr; gap:3rem; }
+  .vmv-grid { grid-template-columns:1fr; }
+  .social-grid { grid-template-columns:repeat(2,1fr); }
+}
+@media (max-width:768px) {
+  .about-hero-img, .about-hero-img-placeholder { height:350px; }
+  .social-grid { grid-template-columns:1fr; }
+  .what-we-do-inner { padding:2rem; }
+  .closing-inner { padding:2rem; }
+  .about-name-card { right:0; bottom:-15px; }
+}
