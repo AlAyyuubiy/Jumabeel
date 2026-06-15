@@ -902,3 +902,43 @@ p {
     height: 50px;
   }
 }
+
+/* ============================================
+   GLOBAL FIX: btn-order button — consistent everywhere
+============================================ */
+.btn-order {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.45rem !important;
+  padding: 0.65rem 1.4rem !important;
+  background: var(--orange) !important;
+  color: var(--white) !important;
+  border-radius: var(--radius-full) !important;
+  font-family: var(--font-body) !important;
+  font-size: 0.85rem !important;
+  font-weight: 600 !important;
+  border: none !important;
+  cursor: pointer !important;
+  transition: var(--transition) !important;
+  white-space: nowrap !important;
+  justify-content: center !important;
+  text-decoration: none !important;
+}
+.btn-order:hover {
+  background: var(--orange-dark) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: var(--shadow-orange) !important;
+}
+.btn-order svg,
+.btn-order img {
+  width: 14px !important;
+  height: 14px !important;
+  fill: white !important;
+  flex-shrink: 0 !important;
+  display: inline-block !important;
+}
+/* Full width variant inside price cards */
+.price-card .btn-order {
+  width: 100% !important;
+  margin-top: 1.2rem !important;
+}
