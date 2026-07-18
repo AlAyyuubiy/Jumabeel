@@ -5,11 +5,15 @@
 
 /* ---------- CROCHET HERO ---------- */
 .crochet-hero {
-  background: url(../assets/images/crochet/crochetbg.jpg);
-  background-color: black;
+  background:
+   linear-gradient(
+   rgba(0,0,0,0.6),
+   rgba(0,0,0,0.6)
+  ),
+  url("/assets/images/crochet/crochetbg.jpg");
   padding: 140px 0 80px;
   text-align: center;
-  position: absolute;
+  position: relative;
   overflow: hidden;
 }
 

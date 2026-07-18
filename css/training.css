@@ -64,7 +64,12 @@
 
 /* Course banner side */
 .course-banner {
-  background:var(--black);
+   background:
+   linear-gradient(
+   rgba(0,0,0,0.6),
+   rgba(0,0,0,0.6)
+  ),
+  url("/assets/images/crochet/baby/jumaryam-.jpg");
   padding:2.5rem;
   display:flex;
   flex-direction:column;
